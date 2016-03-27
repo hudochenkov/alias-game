@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+@import "_reset.pcss";
+@import "_vars.pcss";
+@import "_mixins.pcss";
+
+/* Initial
+-----------------------------------------------------------------------------*/
+
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	background: #fff;
+	color: $default-color;
+	font: 16px/1.25 $default-font;
+}
+a {
+	&,
+	&:active {
+		color: #607890;
+		text-decoration: underline;
+	}
+	&:hover {
+		color: #036;
+	}
+}
+input, select, textarea, button {
+	color: $default-color;
+	font-family: $default-font;
+}
+button {
+	appearance: none;
+}
+.app {
+	padding: 20px;
+	height: 100%;
+}
+.teams {
+	&__team {
+	}
+}
+.landing {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-top: 30px;
+	height: 100%;
+
+	&__title {
+	}
+	&__teams {
+		font-size: 1.2em;
+	}
+	&__start {
+		margin-bottom: -30px;
+	}
+	&__settings {
+	}
+}
+.title {
+	color: #2196F3;
+	text-align: center;
+	font-weight: 700;
+	font-size: 40px;
+}
+.start {
+	padding: 0;
+	width: 100%;
+	border: 1px solid;
+	border-radius: 5px;
+	background: #fff;
+	color: #03a9f4;
+	font-size: 28px;
+	line-height: 70px;
+}
+.like-link {
+	padding: 0;
+	border: none;
+	background: none;
+	color: #03a9f4;
+}
+.game {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	/* justify-content: space-between; */
+	text-align: center;
+
+	&__team {
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+	&__indicator {
+		/* margin: -40px 0; */
+		display: flex;
+		align-items: center;
+	}
+	&__indicator-bar {
+		flex: 1 1 auto;
+		padding: 1px;
+		height: 10px;
+		border: 1px solid #64b5f6;
+		border-radius: 4px;
+	}
+	&__indicator-bar-line {
+		display: block;
+		height: 100%;
+		border-radius: 2px;
+		background: #64b5f6;
+		transition: width .2s;
+	}
+	&__indicator-count {
+		flex: 0 0 auto;
+		width: 30px;
+		color: #64b5f6;
+		text-align: right;
+		font-weight: bold;
+	}
+	&__words {
+		margin: auto;
+	}
+	&__word {
+		margin-bottom: 10px;
+		font-size: 40px;
+	}
+	&__word-translation {
+		opacity: .3;
+	}
+	&__actions {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 20px;
+	}
+	&__action {
+		padding: 0;
+		width: 100px;
+		height: @width;
+		border: none;
+		border-radius: 50%;
+		color: #fff;
+		text-align: center;
+		line-height: @width;
+		user-select: none;
+
+		&--no {
+			background: #f44336;
+		}
+		&--yes {
+			background: #4caf50;
+		}
+	}
+}
+.round-results {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 24px;
+	}
+	&__team {
+		margin-bottom: 20px;
+	}
+	&__list {
+		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
+		margin-bottom: 15px;
+		padding-left: 20px;
+		list-style: disc outside;
+	}
+	&__item {
+		&--true {
+			color: #4caf50;
+		}
+		&--false {
+			color: #f44336;
+		}
+	}
+	&__word {
+	}
+	&__word-translation {
+		margin-left: 6px;
+		font-size: 0.8em;
+		opacity: .5;
+	}
+	&__actions {
+		padding-bottom: 10px;
+	}
+	&__action {
+		padding: 10px 0;
+		font-size: 1.3em;
+	}
+}
+.game-results {
+	&__title {
+		margin-bottom: 30px;
+	}
+	&__list {
+		margin-bottom: 30px;
+		font-size: 1.2em;
+	}
+	&__team {
+		margin-bottom: 5px;
+	}
+	&__actions {
+	}
+	&__action {
+		font-size: 2em;
+	}
+}
+.toggle {
+}
